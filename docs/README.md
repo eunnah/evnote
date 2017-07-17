@@ -31,7 +31,7 @@ sufficient CSS styling:
 [wireframes]: https://github.com/eunnah/evnote/tree/master/docs/wireframes
 [components]: https://github.com/eunnah/evnote/blob/master/docs/component-hierarchy.md
 [sample-state]: https://github.com/eunnah/evnote/blob/master/docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
+[api-endpoints]: https://github.com/eunnah/evnote/blob/master/docs/api-endpoints.md
 [schema]: https://github.com/eunnah/evnote/blob/master/docs/schema.md
 
 ## Implementation Timeline
