@@ -19,7 +19,7 @@ sufficient CSS styling:
 - [ ] Notebooks for organizing notes
 - [ ] Tags
 - [ ] Rich Text Editing
-- [ ] Production README [sample](docs/production_readme.md)
+- [ ] Production README
 
 ## Design Docs
 * [View Wireframes][wireframes]
@@ -28,11 +28,11 @@ sufficient CSS styling:
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
+[wireframes]: https://github.com/eunnah/evnote/tree/master/docs/wireframes
+[components]: https://github.com/eunnah/evnote/blob/master/docs/component-hierarchy.md
+[sample-state]: https://github.com/eunnah/evnote/blob/master/docs/sample-state.md
 [api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+[schema]: https://github.com/eunnah/evnote/blob/master/docs/schema.md
 
 ## Implementation Timeline
 
