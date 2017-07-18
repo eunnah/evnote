@@ -43,7 +43,10 @@
 - A note's tags will be included in the note show template
 - `GET /api/tags`
   - includes query param for typeahead suggestions
-- `POST /api/notes/:note_id/tags`: add tag to note by name
-  - if note doesn't already exist, it will throw an error
-- `DELETE /api/notes/:note_id/tags/:tag_name`: remove tag from note by
-  name
+- `POST /api/tags`: create a new tag
+- `DELETE /api/tags/:id`: remove tag by ID
+
+### Taggings
+
+- `POST /api/taggings` add a tag to an existing note by including the two tagging IDs (tag_id and note_id)
+- `DELETE /api/taggings/:id` delete a tag from an existing note by including the two tagging IDs (tag_id and note_id)
