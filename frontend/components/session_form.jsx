@@ -11,11 +11,11 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
-      this.props.history.push('/');
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.loggedIn) {
+  //     this.props.history.push('/');
+  //   }
+  // }
 
   update(field) {
     return e => this.setState({
@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({user});
+    return this.props.processForm(user);
   }
 
   navLink() {
@@ -38,8 +38,10 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
+    
     return(
       <ul>
+
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -53,7 +55,7 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to BenchBnB!
+          Welcome to Evnote!
           <br/>
           Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}

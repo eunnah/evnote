@@ -4,11 +4,7 @@
     id: 1,
     username: "app-academy"
   },
-  forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createNote: {errors: ["body can't be blank"]}
-  },
+  errors: [],
   notes: {
     1: {
       title: "Sample State",
