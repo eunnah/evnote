@@ -2,8 +2,6 @@ import { CLEAR_ERRORS,
          RECEIVE_ERRORS }
          from '../actions/errors_actions';
 
-import merge from 'lodash/merge';
-
 
 const ErrorsReducer = function(state = [], action){
   Object.freeze(state);

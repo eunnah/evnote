@@ -1,8 +1,6 @@
 import { RECEIVE_CURRENT_USER }
          from '../actions/session_actions';
 
-import merge from 'lodash/merge';
-
 const _nullUser = {
   currentUser: null
 };
