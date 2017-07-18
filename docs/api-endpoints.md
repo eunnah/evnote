@@ -11,7 +11,6 @@
 ### Users
 
 - `POST /api/users`
-- `PATCH /api/users`
 
 ### Session
 
@@ -45,6 +44,6 @@
 - `GET /api/tags`
   - includes query param for typeahead suggestions
 - `POST /api/notes/:note_id/tags`: add tag to note by name
-  - if note doesn't already exist, it will be created
+  - if note doesn't already exist, it will throw an error
 - `DELETE /api/notes/:note_id/tags/:tag_name`: remove tag from note by
   name
