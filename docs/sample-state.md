@@ -1,8 +1,10 @@
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: "app-academy"
+  session: {
+    currentUser: {
+      id: 1,
+      username: "app-academy"
+    }
   },
   errors: [],
   notes: {
@@ -11,12 +13,19 @@
       body: "is useful to plan",
       author_id: 1,
       notebook_id: 1
-      tags: {
-        1: {
-          id: 1
-          name: "Coding"
-        }
-      }
+    }
+  },
+  tags: {
+    1: {
+      id: 1,
+      name: "Coding"
+    }
+  },
+  tagging: {
+    1: {
+      id: 1,
+      tag_id: 1,
+      note_id: 2
     }
   },
   notebooks: {
