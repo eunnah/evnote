@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    return this.props.processForm(user);
+    return this.props.requestSignup(user);
   }
 
   navLink() {
@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    
+
     return(
       <ul>
 
@@ -54,30 +54,40 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Evnote!
+        <div className="create-account-tagline">Never forget your notes with Evnote!</div>
+        <br /> <br />Create Account
+        <form className="login-form-box">
           <br/>
           Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Username:
-              <input type="text"
+            <label>Email<br />
+              <div className="center-input">
+                <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
-              />
+                />
+              </div>
             </label>
             <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
+            <label>Password<br />
+              <div className="center-input">
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+            </div>
             </label>
             <br/>
-            <input type="submit" value="Submit" />
+            <div className="button">
+              <input type="submit" value="Sign Up" onClick={this.handleSubmit} />
+            </div>
+            <div className="button">
+              <input type="submit" value="Guest Login" className="guest-login" onClick={this.props.requestGuestLogin} />
+            </div>
           </div>
         </form>
       </div>
@@ -85,4 +95,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(SignupForm);

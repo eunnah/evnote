@@ -1,18 +1,20 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
-import SessionFormContainer from './session_form_container';
+import SignupFormContainer from './signup_form_container';
+import LoginFormContainer from './login_form_container';
 import {AuthRoute} from '../util/route_util';
 
 const App = () => (
-  <div>
+  <div className="app">
     <header>
-      <h1>Evnote</h1>
+      <div className="bar-header"></div>
+      <div className="create-account-logo"><img src={window.logoUrl} /></div>
       <GreetingContainer />
     </header>
     <Switch>
-    <AuthRoute path="/login" component={SessionFormContainer} />
-    <AuthRoute path="/signup" component={SessionFormContainer} />
+    <AuthRoute path="/login" component={LoginFormContainer} />
+    <AuthRoute path="/signup" component={SignupFormContainer} />
     </Switch>
   </div>
 );

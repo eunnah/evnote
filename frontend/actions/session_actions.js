@@ -27,6 +27,19 @@ export const requestLogin = user => dispatch => {
   );
 };
 
+export const requestGuestLogin = () => dispatch => {
+  return APIUtil.login({
+    username: 'guest',
+    password: 'password'
+  }).then(
+    currentUser => {
+      dispatch(receiveCurrentUser(currentUser));
+      dispatch(Errors.clearErrors());
+    },
+    error => dispatch(Errors.receiveErrors(error.responseJSON))
+  );
+};
+
 export const requestLogout = () => dispatch => {
   return APIUtil.logout().then(
     currentUser => dispatch(receiveCurrentUser(null)),
