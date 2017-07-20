@@ -7,8 +7,8 @@
  - Home
  - Sidebar
 
-**NotesContainer**
- - NotesHeader
+**NoteContainer**
+ - NoteHeader
   * NoteIndex
 
 **NotebookContainer**
