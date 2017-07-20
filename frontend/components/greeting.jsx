@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Route, Redirect } from 'react-router';
+import { Link, Route, Redirect } from 'react-router-dom';
 
 const sessionLinks = () => (
     <Redirect to="/login" />
