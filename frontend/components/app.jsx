@@ -9,8 +9,10 @@ const App = () => (
   <div className="app">
     <header>
       <div className="bar-header"></div>
-      <div className="create-account-logo"><img src={window.logoUrl} /></div>
-      <GreetingContainer />
+      <subheader>
+        <div className="create-account-logo"><img src={window.logoUrl} /></div>
+        <GreetingContainer />
+      </subheader>
     </header>
     <Switch>
     <AuthRoute path="/login" component={LoginFormContainer} />

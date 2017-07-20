@@ -54,8 +54,11 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        <div className="create-account-tagline">Never forget your notes with Evnote!</div>
-        <br /> <br />Create Account
+        <h1>Meet Evnote, your second brain.</h1>
+        <div className="create-account-tagline">
+          Capture, organize, and share notes from anywhere. Your best ideas are always with you and always in sync.
+        </div>
+        <br /> <br /><b>Create Account</b>
         <form className="login-form-box">
           <br/>
           Please {this.props.formType} or {this.navLink()}

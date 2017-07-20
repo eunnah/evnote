@@ -29,7 +29,7 @@ export const requestLogin = user => dispatch => {
 
 export const requestGuestLogin = () => dispatch => {
   return APIUtil.login({
-    username: 'guest',
+    username: 'guest@gmail.com',
     password: 'password'
   }).then(
     currentUser => {
