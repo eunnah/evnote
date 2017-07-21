@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SignupForm from './signup_form';
 import { requestLogin, requestSignup, requestGuestLogin } from '../actions/session_actions';
+import { clearErrors } from '../actions/errors_actions';
 
 const mapStateToProps = (state) => ({
   loggedIn: Boolean(state.session.currentUser),
@@ -12,6 +13,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   return {
     requestSignup: user => dispatch(requestSignup(user)),
     requestGuestLogin: () => dispatch(requestGuestLogin()),
+    clearErrors: () => dispatch(clearErrors()),
     formType
   };
 };
