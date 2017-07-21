@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import LoginForm from './login_form';
-import { requestLogin, requestSignup } from '../actions/session_actions';
+import { requestLogin, requestSignup, requestGuestLogin } from '../actions/session_actions';
 import { clearErrors } from '../actions/errors_actions';
 
 const mapStateToProps = (state) => ({
@@ -12,6 +12,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   const formType = location.pathname.slice(1);
   return {
     requestLogin: user => dispatch(requestLogin(user)),
+    requestGuestLogin: () => dispatch(requestGuestLogin()),
     clearErrors: () => dispatch(clearErrors()),
     formType
   };
