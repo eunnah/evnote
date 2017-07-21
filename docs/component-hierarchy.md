@@ -4,12 +4,16 @@
  - AuthForm
 
 **HomeContainer**
- - Home
+- Home (renders Sidebar, NotesIndex, and NodeDetail)
  - Sidebar
 
-**NoteContainer**
- - NoteHeader
-  * NoteIndex
+**NoteDetailContainer**
++ NoteDetail
+  + NoteTools
+  - NotebookSearch
+  - Tags
+    - Tag
+  * Note
 
 **NotebookContainer**
  - NotebookHeader
@@ -24,13 +28,8 @@
   + NoteIndex
 
 **NoteIndex**
+- NoteIndexHeader
  - NoteIndexItem
-  + NoteDetail
-    + NoteTools
-    - NotebookSearch
-    - Tags
-      - Tag
-    * Note
 
 **NewNoteContainer**
  - NewNote

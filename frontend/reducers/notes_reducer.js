@@ -6,12 +6,12 @@ import {
 } from '../actions/note_actions';
 
 const NotesReducer = (state = {}, action) => {
-  Object.freeze(state)
+  Object.freeze(state);
   let newState = merge({}, state);
 
   switch(action.type) {
     case RECEIVE_NOTES:
-      return action.notes; //should it be just return action?
+      return action.notes;
     case RECEIVE_NOTE:
       const newNote = {[action.payload.note.id]: action.payload.note};
       return merge({}, state, newNote);
