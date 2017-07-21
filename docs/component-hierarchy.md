@@ -59,7 +59,7 @@
 | "/signup" | "AuthFormContainer" |
 | "/login" | "AuthFormContainer" |
 | "/home" | "HomeContainer" |
-| "/home/note/:noteId" | "NotesContainer" |
+| "/home/note/:noteId" | "NoteDetailContainer" |
 | "/home/notebook/:notebookId/note/:noteId" | "NotebookContainer" |
 | "/home/tag/:tagId/note/:notedId" | "TagContainer" |
 | "/home/search-results" | "SearchResultsContainer"

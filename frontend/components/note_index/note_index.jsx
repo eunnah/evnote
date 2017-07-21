@@ -11,19 +11,19 @@ class NoteIndex extends Component {
 
   render() {
     const { notes } = this.props;
+    if (!notes) return null;
+
     return (
-      loading ?
-      <LoadingIcon /> :
-      <section className="pokedex">
+
+      <section className="notes-index">
         <ul>
-          {pokemon.map(poke => <PokemonIndexItem key={poke.id} pokemon={poke} />)}
+          {notes.map(note => <NoteIndexItem key={note.id} note={note} />)}
         </ul>
 
-        <Route exact path="/" component={PokemonFormContainer} />
-        <Route path="/pokemon/:pokemonId" component={PokemonDetailContainer} />
+        
       </section>
     );
   }
 }
 
-export default PokemonIndex;
+export default NoteIndex;
