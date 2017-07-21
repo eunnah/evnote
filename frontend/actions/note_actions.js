@@ -9,9 +9,9 @@ export const receiveNotes = notes => ({
   notes
 });
 
-export const receiveNote = note => ({
+export const receiveNote = payload => ({
   type: RECEIVE_NOTE,
-  note
+  payload
 });
 
 export const createNote = note => dispatch => (

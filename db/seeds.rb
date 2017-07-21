@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create!(username: "guest", password: "password")
+Note.create!(title: "title1", body: "body1", author_id: 1, notebook_id: 1)
+Notebook.create!(title: "Notebook1", author_id: 1, description: "yay")

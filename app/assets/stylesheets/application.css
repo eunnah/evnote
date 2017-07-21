@@ -95,7 +95,8 @@ h2 {
   font-size: 32px;
 }
 
-input[type="submit"]:last-child {
+input[type="submit"]:last-child, .guest-login {
+  cursor: pointer;
   line-height: 2.75;
   color: #ffffff;
   background-color: #2dbe60;
@@ -119,7 +120,7 @@ input[type="submit"]:last-child {
   border-image: initial;
 }
 
-input[type="submit"]:last-child:hover {
+input[type="submit"]:last-child:hover, .guest-login:hover {
   color: #ffffff;
   background-color: #28a956;
   border-color: #1b9848;

@@ -13,7 +13,7 @@ const NotesReducer = (state = {}, action) => {
     case RECEIVE_NOTES:
       return action.notes; //should it be just return action?
     case RECEIVE_NOTE:
-      const newNote = {[action.note.id]: action.note};
+      const newNote = {[action.payload.note.id]: action.payload.note};
       return merge({}, state, newNote);
     default:
       return state;

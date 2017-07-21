@@ -93,7 +93,7 @@ class SignupForm extends React.Component {
               <input type="submit" value="Sign Up" onClick={this.handleSubmit} />
             </div>
             <div className="button">
-              <input type="submit" value="Guest Login" className="guest-login" onClick={this.props.requestGuestLogin} />
+              <input value="Guest Login" className="guest-login" onClick={this.props.requestGuestLogin} />
             </div>
           </div>
         </form>
