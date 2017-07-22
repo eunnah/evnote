@@ -19,8 +19,6 @@ class NoteIndex extends Component {
         <ul>
           {notes.map(note => <NoteIndexItem key={note.id} note={note} />)}
         </ul>
-
-        
       </section>
     );
   }
