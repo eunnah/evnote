@@ -8,18 +8,8 @@ import NoteTools from './note_tools';
 
 class NoteDetail extends Component {
 
-  // componentDidMount() {
-  //   this.props.fetchNote(this.props.match.params.noteId);
-  // }
-
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.match.params.noteId !== nextProps.match.params.noteId) {
-  //     this.props.fetchNote(nextProps.match.params.noteId);
-  //   }
-  // }
-
   render() {
-    
+
     let note = this.props.note;
 
     if (!note) return null;
