@@ -1,23 +1,19 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
 import SignupFormContainer from './signup_form_container';
 import LoginFormContainer from './login_form_container';
-import {AuthRoute} from '../util/route_util';
+import HomeContainer from './home/home_container';
+import {AuthRoute, ProtectedRoute} from '../util/route_util';
 
 const App = () => (
   <div className="app">
-    <header>
-      <div className="bar-header"></div>
-      <subheader>
-        <div className="create-account-logo"><img src={window.logoUrl} /></div>
-        <GreetingContainer />
-      </subheader>
-    </header>
+    <Redirect to="/login" />
     <Switch>
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    <AuthRoute path="/signup" component={SignupFormContainer} />
+      <AuthRoute path="/login" component={LoginFormContainer} />
+      <AuthRoute path="/signup" component={SignupFormContainer} />
     </Switch>
+    <ProtectedRoute path="/note" component={HomeContainer} />
   </div>
 );
 

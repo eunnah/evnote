@@ -1,0 +1,35 @@
+.preview-title {
+  font-size: 20px;
+  color: #515151;
+  margin: 10px 5px 4px 20px;
+}
+
+.note-index-item:hover {
+  background-color: #3ebf6e;
+}
+
+.note-index-item {
+  width: auto;
+  height: 115px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.note-index-item:hover .child {
+  color: #f6f6f6;
+}
+
+.preview-time {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-left: 22px;
+  margin-top: 4px;
+}
+
+.preview-body {
+  font-size: 14px;
+  line-height: 1.2;
+  height: 49px;
+  overflow: hidden;
+  margin: 9px 3px 5px 20px;
+}

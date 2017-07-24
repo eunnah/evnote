@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route, Redirect } from 'react-router-dom';
 
-const sessionLinks = () => (
+const redirect = () => (
     <Redirect to="/login" />
 );
 
@@ -12,8 +12,10 @@ const personalGreeting = (currentUser, logout) => (
 	</hgroup>
 );
 
-const Greeting = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
-);
+const Greeting = ({ currentUser, logout }) => {
+  if (!currentUser) {
+    return redirect();
+  }
+};
 
 export default Greeting;

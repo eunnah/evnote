@@ -20,10 +20,24 @@ main {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 .bar-header {
@@ -64,7 +78,7 @@ body {
   margin: 0 auto;
   width: 100%;
   background-color: rgb(243, 243, 243);
-
+  overflow-x: hidden;
 }
 
 .app {
@@ -91,9 +105,12 @@ h1 {
   display: block;
 }
 
-h2 {
-  font-size: 32px;
+h2, h3, h4, h5, h6 {
+  margin: 0;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 
 input[type="submit"]:last-child, .guest-login {
   cursor: pointer;

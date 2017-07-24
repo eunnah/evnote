@@ -3,8 +3,7 @@ import NoteIndex from './note_index';
 import { fetchNotes } from '../../actions/note_actions';
 import { selectAllNotes } from '../../reducers/selectors';
 
-const mapStateToProps = state => ({
-  // pokemon: selectAllPokemon(state),
+const mapStateToProps = (state, ownProps) => ({
   notes: selectAllNotes(state),
   loggedIn: Boolean(state.session.currentUser),
   errors: state.errors

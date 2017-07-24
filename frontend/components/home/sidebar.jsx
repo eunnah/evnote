@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Sidebar = (currentUser, logout) => (
+const Sidebar = ({currentUser, logout}) => (
 	<section className="sidebar">
-    <div className="sidebar-elephant-icon"><img src={window.elaphantIconUrl} /></div>
+    <div className="sidebar-elephant-icon"><img src={window.elephantIconUrl} /></div>
     <div className="sidebar-new-icon"><img src={window.newIconUrl} /></div>
     <div className="sidebar-note-icon"><img src={window.noteIconUrl} /></div>
     <div className="sidebar-notebook-icon"><img src={window.notebookIconUrl} /></div>

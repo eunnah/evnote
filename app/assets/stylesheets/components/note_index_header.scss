@@ -1,0 +1,27 @@
+.note-index-header {
+  color: #878787;
+  display: inline-block;
+  vertical-align: top;
+  border-bottom-color: #ececec;
+  border-left-color: #ececec;
+  border-right-color: #ececec;
+  text-align: left;
+}
+
+.note-index-header-title {
+  font-weight: 200px;
+  line-height: 26px;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding-left: 24px;
+  padding-right: 20px;
+  padding-top: 24px;
+  position-top: relative;
+}
+
+.note-index-header-count {
+  font-size: 16px;
+  padding: 10px 25px;
+  color: #acacac;
+}

@@ -51,6 +51,13 @@ class LoginForm extends React.Component {
 
   render() {
     return (
+      <div className="login-form">
+      <header>
+        <div className="bar-header"></div>
+        <subheader>
+          <div className="create-account-logo"><img src={window.logoUrl} /></div>
+        </subheader>
+      </header>
       <div className="login-form-container">
         <h1>Meet Evnote, your second brain.</h1>
         <div className="create-account-tagline">
@@ -91,6 +98,7 @@ class LoginForm extends React.Component {
             </div>
           </div>
         </form>
+      </div>
       </div>
     );
   }

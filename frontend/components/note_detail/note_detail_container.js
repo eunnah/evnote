@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import Note from './note';
-import NoteDetail from './note';
-import { fetchNotes, fetchNote, editNote } from '../actions/session_actions';
+import NoteDetail from './note_detail';
+import { fetchNote, fetchNotes, editNote } from '../../actions/note_actions';
+import { selectSingleNote } from '../../reducers/selectors';
 
-const mapStateToProps = (state) => ({
-  loggedIn: Boolean(state.session.currentUser),
-  errors: state.errors
-});
+const mapStateToProps = (state, ownProps) => {
+  const note = selectSingleNote(state, ownProps.match.params.noteId);
+  return {note};
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

@@ -14,11 +14,15 @@ class NoteIndex extends Component {
     if (!notes) return null;
 
     return (
-
-      <section className="notes-index">
+      <section className="note-index">
+        <div className="note-index-header">
+          <NoteIndexHeader notes={notes} />
+        </div>
+        <div className="note-index-item-list">
         <ul>
           {notes.map(note => <NoteIndexItem key={note.id} note={note} />)}
         </ul>
+        </div>
       </section>
     );
   }
