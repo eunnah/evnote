@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { createNote } from '../../actions/note_actions';
-import NewNote from './new_note';
+import RTETools from './rte_tools';
+import { clearErrors } from '../../actions/errors_actions';
 
 const mapStateToProps = (state) => ({
   currentUser: state.session.currentUser,
@@ -9,11 +10,12 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createNote: (note) => dispatch(createNote(note))
+    createNote: (note) => dispatch(createNote(note)),
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(NewNote);
+)(RTETools);

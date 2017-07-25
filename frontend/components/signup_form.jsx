@@ -90,10 +90,10 @@ class SignupForm extends React.Component {
             </div>
             </label>
             <br/>
-            <div className="button">
+            <div className="signup-button">
               <input type="submit" value="Sign Up" onClick={this.handleSubmit} />
             </div>
-            <div className="button">
+            <div className="guest-button">
               <input value="Guest Login" className="guest-login" onClick={this.props.requestGuestLogin} />
             </div>
           </div>

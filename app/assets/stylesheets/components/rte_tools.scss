@@ -1,0 +1,64 @@
+.rte-tools {
+  display: flex column;
+}
+
+.rte-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.new-note-form {
+  
+}
+
+.new-buttons {
+  height: 28px;
+  width: 78px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  line-height: 25px;
+  margin: 10px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  border-radius: 7px;
+  text-align: center;
+  white-space: normal;
+  box-sizing: border-box;
+  border: none;
+  float: none;
+  transition: all .2s ease;
+  font: inherit;
+  margin: 5px;
+  vertical-align: baseline;
+  align-items: flex-start;
+}
+
+.submit-note-button:hover {
+  color: #ffffff;
+  background-color: #28a956;
+  border-color: #1b9848;
+  text-decoration: none;
+}
+
+.cancel-note-button:hover {
+  background-color: darkgray;
+  color: #414141;
+  border-color: #1b9848;
+  text-decoration: none;
+}
+
+.button {
+  text-align:center;
+}
+
+.submit-note-button {
+  background-color: #2dbe60;
+}
+
+.cancel-note-button {
+  background-color: #f6f6f6;
+  color: #414141;
+}

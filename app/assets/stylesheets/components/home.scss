@@ -6,7 +6,7 @@
   will-change: overflow;
 }
 
-.note-index-item-list, .note-detail {
+.note-index-item-list, .note-detail, .new-note {
   overflow: auto;
   height: auto;
   -webkit-overflow-scrolling: touch;
@@ -14,7 +14,7 @@
 }
 
 .note-index-item-list::-webkit-scrollbar,
-.note-detail::-webkit-scrollbar {
+.note-detail::-webkit-scrollbar, .new-note::-webkit-scrollbar {
     display: none;
 }
 
@@ -38,7 +38,7 @@
   border-bottom: 1px solid #ececec;
 }
 
-.note-detail {
+.note-detail, .new-note {
   background-color: white;
   width: 100%;
   height: 100%;

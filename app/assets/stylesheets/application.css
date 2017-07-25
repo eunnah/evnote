@@ -112,7 +112,7 @@ h2, h3, h4, h5, h6 {
 }
 
 
-input[type="submit"]:last-child, .guest-login {
+.login-form input[type="submit"]:last-child, .signup-form input[type="submit"]:last-child, .guest-login {
   cursor: pointer;
   line-height: 2.75;
   color: #ffffff;
@@ -137,7 +137,7 @@ input[type="submit"]:last-child, .guest-login {
   border-image: initial;
 }
 
-input[type="submit"]:last-child:hover, .guest-login:hover {
+.login-form input[type="submit"]:last-child, .signup-form input[type="submit"]:last-child, .guest-login:hover {
   color: #ffffff;
   background-color: #28a956;
   border-color: #1b9848;
