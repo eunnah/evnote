@@ -5,7 +5,7 @@ class RTETools extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'New Note Placeholder Title',
+      title: 'Title your note',
       body: '',
       author_id: this.props.currentUser.id
     };
@@ -13,13 +13,19 @@ class RTETools extends React.Component {
     this.redirect = this.redirect.bind(this);
     this.update = this.update.bind(this);
     this.prevPath;
+    this.updateTitle = this.updateTitle.bind(this);
   }
 
   update(value) {
     this.setState({ body: value });
   }
 
-  handleSubmit() {
+  updateTitle(value) {
+    this.setState({ title: value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
     const note = this.state;
     return this.props.createNote(note);
   }
@@ -34,7 +40,8 @@ class RTETools extends React.Component {
   }
 }
 
-  redirect() {
+  redirect(e) {
+    e.preventDefault();
     return () => (<Redirect to={this.prevPath} />);
   }
 
@@ -53,17 +60,23 @@ class RTETools extends React.Component {
   }
 
   render() {
+    // console.log(this.state);
     return (
 
       <div className="rte-tools">
-        <div className="rte-buttons">
-            <input className="submit-note-button new-buttons" type="submit" value="Submit" onClick={this.handleSubmit} />        
+        <form>
+          <div className="rte-buttons">
+            <input className="submit-note-button new-buttons" type="submit" value="Submit" onClick={this.handleSubmit} />
             <input className="cancel-note-button new-buttons" type="submit" value="Cancel" onClick={this.redirect} />
-        </div>
-        <div className="new-note-form">
-          <ReactQuill value={this.state.body}
-                  onChange={this.update} />
-        </div>
+          </div>
+
+          <input type="text" id="new-note-title-editor" value={this.state.title} onChange={this.updateTitle}></input>
+
+          <div className="new-note-text-editor">
+            <ReactQuill value={this.state.body}
+                    onChange={this.update}></ReactQuill>
+          </div>
+        </form>
       </div>
 
     );

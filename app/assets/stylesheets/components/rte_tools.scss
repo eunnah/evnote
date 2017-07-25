@@ -9,7 +9,7 @@
 }
 
 .new-note-form {
-  
+  height: 80%;
 }
 
 .new-buttons {
@@ -31,34 +31,43 @@
   float: none;
   transition: all .2s ease;
   font: inherit;
+  color: #ffffff;
   margin: 5px;
   vertical-align: baseline;
   align-items: flex-start;
 }
 
-.submit-note-button:hover {
-  color: #ffffff;
+.submit-note-button:hover, .cancel-note-button:hover {
   background-color: #28a956;
   border-color: #1b9848;
   text-decoration: none;
 }
 
-.cancel-note-button:hover {
-  background-color: darkgray;
-  color: #414141;
-  border-color: #1b9848;
-  text-decoration: none;
-}
+// .cancel-note-button:hover {
+//   background-color: darkgray;
+//   color: #414141;
+//   border-color: #1b9848;
+//   text-decoration: none;
+// }
 
 .button {
   text-align:center;
 }
 
-.submit-note-button {
+.submit-note-button, .cancel-note-button {
   background-color: #2dbe60;
 }
 
-.cancel-note-button {
-  background-color: #f6f6f6;
-  color: #414141;
+#new-note-title-editor {
+  font-size: 28px;
+  font-weight: 200;
+  height: 35px;
+  border: none;
+  color: #2dbe60;
+  font-family: "Scope One", serif;
 }
+
+// .cancel-note-button {
+//   background-color: #f6f6f6;
+//   color: #414141;
+// }
