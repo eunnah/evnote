@@ -15,8 +15,10 @@ export const receiveNote = payload => ({
 });
 
 export const createNote = note => dispatch => (
-  APIUtil.createNote(note).then(note => (
-    dispatch(receiveNote(note))
+  APIUtil.createNote(note).then(note => {
+    
+    return dispatch(receiveNote(note)
+  }
   ))
 );
 

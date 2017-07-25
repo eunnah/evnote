@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
+import {withRouter} from 'react-router';
 
 class RTETools extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Title your note',
+      title: '',
       body: '',
-      author_id: this.props.currentUser.id
+      author_id: this.props.currentUser.id,
+      notebook_id: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.redirect = this.redirect.bind(this);
     this.update = this.update.bind(this);
-    this.prevPath;
     this.updateTitle = this.updateTitle.bind(this);
   }
 
@@ -20,29 +21,23 @@ class RTETools extends React.Component {
     this.setState({ body: value });
   }
 
-  updateTitle(value) {
-    this.setState({ title: value });
+  updateTitle(e) {
+    this.setState({ title: e.currentTarget.value });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const note = this.state;
-    return this.props.createNote(note);
+    return this.props.createNote({note});
   }
 
   componentWillUnmount() {
     this.props.clearErrors();
   }
 
-  componentWillReceiveProps(nextProps) {
-  if (nextProps.location !== this.props.location) {
-    this.prevPath = this.props.location;
-  }
-}
-
   redirect(e) {
     e.preventDefault();
-    return () => (<Redirect to={this.prevPath} />);
+    this.props.history.goBack();
   }
 
   renderErrors() {
@@ -70,11 +65,11 @@ class RTETools extends React.Component {
             <input className="cancel-note-button new-buttons" type="submit" value="Cancel" onClick={this.redirect} />
           </div>
 
-          <input type="text" id="new-note-title-editor" value={this.state.title} onChange={this.updateTitle}></input>
 
           <div className="new-note-text-editor">
-            <ReactQuill value={this.state.body}
-                    onChange={this.update}></ReactQuill>
+            <input className="my-editing-area" type="text" id="new-note-title-editor" value={this.state.title} placeholder={"Title your note"} onChange={this.updateTitle} />
+            <ReactQuill value={this.state.body} onChange={this.update}>
+          </ReactQuill>
           </div>
         </form>
       </div>
@@ -83,4 +78,4 @@ class RTETools extends React.Component {
   }
 }
 
-export default RTETools;
+export default withRouter(RTETools);

@@ -1,0 +1,34 @@
+.note-detail-buttons {
+  display: flex;
+}
+
+.note-detail-options {
+  display: flex;
+}
+
+.note-detail-button#info {
+  background: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501007474/info_agphhy.png);
+  background-size: 24px 24px;
+}
+
+.note-detail-button#info:hover {
+  background: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501007474/info-green_xk6ldx.png);
+  background-size: 24px 24px;
+}
+
+.note-detail-button#trash {
+  background: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501007474/trash_sddkgh.png);
+  background-size: 24px 24px;
+}
+
+.note-detail-button#trash:hover {
+  background: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501007474/trash-green_au4yo0.png);
+  background-size: 24px 24px;
+}
+
+.note-detail-button {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  border-style: none;
+}

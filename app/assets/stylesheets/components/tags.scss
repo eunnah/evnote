@@ -1,0 +1,20 @@
+.tags {
+  width: auto;
+  height: 30px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+img#tiny-tag {
+  height: 15px;
+  width: 13px;
+  margin: 10px 5px;
+}
+
+img#dropdown-arrow {
+  height: 15px;
+  width: 15px;
+}

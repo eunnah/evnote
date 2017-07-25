@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Tags from './tags';
 import Tag from './tag';
-import Note from './note';
 import NotebookSearch from './notebook_search';
+import Note from './note';
 import NoteTools from './note_tools';
 
 class NoteDetail extends Component {
@@ -16,15 +16,7 @@ class NoteDetail extends Component {
 
     return (
       <section className="note-detail">
-        <div className="note-tools">
-          <NoteTools note={note} />
-        </div>
-        <div className="notebook-search">
-          <NotebookSearch note={note} />
-        </div>
-        <div className="tags">
-          <Tags note={note} />
-        </div>
+        <NoteTools note={note} />
         <div className="note">
           <Note note={note} />
         </div>
