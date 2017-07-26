@@ -3,6 +3,37 @@
   height: 36px;
 }
 
+.circle-button {
+  display: block;
+  width: 37px;
+  height: 37px;
+  background-color: #f6f6f6;
+  background-size: 37px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 15px;
+  border: none;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-image 0.4s ease;
+}
+
+.circle-button#sidebar-new-icon {
+  background-image: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501019657/new-note_iovsfq.png);
+}
+
+.circle-button#sidebar-note-icon {
+  background-image: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501007474/notes_szngox.png);
+}
+
+.circle-button#sidebar-notebook-icon {
+  background-image: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501007474/notebooks_osv95p.png);
+}
+
+.circle-button#sidebar-tag-icon {
+  background-image: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501007474/tags_y4yngc.png);
+}
+
 .sidebar {
   left: 0;
   transition: opacity 0.25s ease-in-out;
@@ -13,5 +44,5 @@
 }
 
 .sidebar-elephant-icon, .sidebar-new-icon, .sidebar-note-icon, .sidebar-notebook-icon, .sidebar-tag-icon {
-  
+
 }

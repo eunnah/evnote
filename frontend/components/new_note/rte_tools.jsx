@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
 import {withRouter} from 'react-router';
+import {Redirect} from 'react-router-dom';
 
 class RTETools extends React.Component {
   constructor(props) {
@@ -31,6 +32,13 @@ class RTETools extends React.Component {
     return this.props.createNote({note});
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+    if (nextProps.notesCount !== this.props.notesCount) {
+      return this.props.history.push(`/note/${nextProps.noteId}`);
+    }
+  }
+
   componentWillUnmount() {
     this.props.clearErrors();
   }
@@ -55,7 +63,7 @@ class RTETools extends React.Component {
   }
 
   render() {
-    // console.log(this.state);
+    
     return (
 
       <div className="rte-tools">

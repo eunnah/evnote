@@ -11,14 +11,15 @@ class NoteDetail extends Component {
   render() {
 
     let note = this.props.note;
+    let currentUser = this.props.currentUser;
 
     if (!note) return null;
 
     return (
       <section className="note-detail">
-        <NoteTools note={note} />
+        <NoteTools note={note} currentUser={currentUser} />
         <div className="note">
-          <Note note={note} />
+          <Note note={note} currentUser={currentUser} />
         </div>
       </section>
     );

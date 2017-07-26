@@ -3,10 +3,15 @@ import { createNote } from '../../actions/note_actions';
 import RTETools from './rte_tools';
 import { clearErrors } from '../../actions/errors_actions';
 
-const mapStateToProps = (state) => ({
-  currentUser: state.session.currentUser,
-  errors: state.errors
-});
+const mapStateToProps = (state) => {
+  const notes = Object.values(state.notes);
+  return {
+    notesCount: notes.length,
+    currentUser: state.session.currentUser,
+    errors: state.errors,
+    noteId: notes.slice(-1)[0].id
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

@@ -14,11 +14,13 @@
  *= require_self
  */
 
-/** @import  (look up syntax) */
+
 
 main {
   height: 100vh;
+  width: 100%;
 }
+
 
 a {
   text-decoration: none;
@@ -39,9 +41,9 @@ img {
   font: inherit;
   vertical-align: baseline;
 }
-
+*/
 .bar-header {
-  width: 100%;
+  flex: 0 0 100%;
   background-color: #2dbe60;
   position: relative;
   height: 4px;
@@ -61,11 +63,9 @@ header img {
 
 .create-account-tagline {
   font-family: webfont;
-
 }
 
 ul {
-
   list-style: none;
 }
 
@@ -85,16 +85,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   height: 100%;
-}
-
-.logo-bar {
-  background-color: #2dbe60;
-  display: block;
-  font-family: Montserrat, helvetica, arial, sans-serif;
-  height: 4px;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -137,7 +129,7 @@ h2, h3, h4, h5, h6 {
   border-image: initial;
 }
 
-.login-form input[type="submit"]:last-child, .signup-form input[type="submit"]:last-child, .guest-login:hover {
+.login-form input[type="submit"]:last-child:hover, .signup-form input[type="submit"]:last-child:hover, .guest-login:hover {
   color: #ffffff;
   background-color: #28a956;
   border-color: #1b9848;
@@ -145,7 +137,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .button {
-  text-align:center;
+  text-align: center;
 }
 
 input {

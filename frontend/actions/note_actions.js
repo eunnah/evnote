@@ -16,10 +16,9 @@ export const receiveNote = payload => ({
 
 export const createNote = note => dispatch => (
   APIUtil.createNote(note).then(note => {
-    
-    return dispatch(receiveNote(note)
+    return dispatch(receiveNote(note));
   }
-  ))
+  )
 );
 
 export const editNote = (id, note) => dispatch => (

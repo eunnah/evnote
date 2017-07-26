@@ -6,6 +6,13 @@
   display: flex;
 }
 
+.note-detail-options h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: #515151;
+  margin: 5px;
+}
+
 .note-detail-button#info {
   background: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501007474/info_agphhy.png);
   background-size: 24px 24px;
