@@ -12,7 +12,6 @@ class Note extends React.Component {
       notebook_id: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.redirect = this.redirect.bind(this);
     this.update = this.update.bind(this);
     this.updateTitle = this.updateTitle.bind(this);
   }
@@ -34,6 +33,10 @@ class Note extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   updateTitle(e) {
     this.setState({ title: e.currentTarget.value });
   }
@@ -44,10 +47,11 @@ class Note extends React.Component {
     return this.props.editNote(this.props.match.params.noteId, {note});
   }
 
-  redirect(e) {
-    e.preventDefault();
-    this.props.history.goBack();
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.note !== this.props.note) {
+  //     return this.props.history.push(`/note/${nextProps.noteId}`);
+  //   }
+  // }
 
   renderErrors() {
 
@@ -69,10 +73,8 @@ class Note extends React.Component {
       <div className="rte-tools">
         <form>
           <div className="rte-buttons">
-            <input className="submit-note-button new-buttons" type="submit" value="Submit" onClick={this.handleSubmit} />
-            <input className="cancel-note-button new-buttons" type="submit" value="Cancel" onClick={this.redirect} />
+            <input className="submit-note-button new-buttons" type="submit" value="Save" onClick={this.handleSubmit} />
           </div>
-
 
           <div className="new-note-text-editor">
             <input className="my-editing-area" type="text" id="new-note-title-editor" value={this.state.title} placeholder={"Title your note"} onChange={this.updateTitle} />

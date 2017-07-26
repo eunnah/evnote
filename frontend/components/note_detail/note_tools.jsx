@@ -3,12 +3,20 @@ import ReactQuill from 'react-quill';
 import Tags from './tags';
 import Tag from './tag';
 import NotebookSearch from './notebook_search';
-import {withRouter} from 'react-router';
-import {Redirect} from 'react-router-dom';
+import {Redirect, withRouter} from 'react-router-dom';
 
 class NoteTools extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  handleDelete() {
+    
+
+  }
+
+  showInfo() {
+
 
   }
 
@@ -17,8 +25,8 @@ class NoteTools extends React.Component {
     return(
     <span className="note-detail-tools">
       <div className="note-detail-buttons">
-        <div><button title="Note Info" id="info" className="note-detail-button"></button></div>
-        <div><button title="Delete Note" id="trash" className="note-detail-button"></button></div>
+        <div><button title="Note Info" id="info" className="note-detail-button" onClick={this.showInfo}></button></div>
+        <div><button title="Delete Note" id="trash" className="note-detail-button" onClick={this.handleDelete}></button></div>
       </div>
       <div className="note-detail-options">
         <div className="notebook-header">
