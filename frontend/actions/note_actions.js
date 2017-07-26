@@ -16,9 +16,9 @@ export const receiveNote = payload => ({
   payload
 });
 
-export const removeNote = note => ({
+export const removeNote = payload => ({
   type: REMOVE_NOTE,
-  note
+  payload
 });
 
 export const createNote = note => dispatch => (
@@ -49,7 +49,8 @@ export const fetchNote = id => dispatch => (
   ))
 );
 
-export const deleteNote = (id) => (dispatch) => {
-  return APIUtil.deleteNote(id)
-    .then(note => dispatch(removeNote(note)));
-};
+export const deleteNote = (id) => dispatch => (
+  APIUtil.deleteNote(id).then(note => (
+    dispatch(removeNote(note))
+  ))
+);

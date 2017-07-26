@@ -34,10 +34,10 @@ class Note extends React.Component {
       );
     }
   }
-  //
-  // componentWillUnmount() {
-  //   this.props.clearErrors();
-  // }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
 
   updateTitle(e) {
     this.setState({ title: e.currentTarget.value });
@@ -74,6 +74,9 @@ class Note extends React.Component {
     return (
 
       <div className="rte-tools">
+        <div className="RTE-render-errors">
+          {this.renderErrors()}
+        </div>
         <form>
           <div className="rte-buttons">
             <input className="submit-note-button new-buttons" type="submit" value="Save" onClick={this.handleSubmit} />

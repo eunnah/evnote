@@ -65,6 +65,9 @@ class RTETools extends React.Component {
     return (
 
       <div className="rte-tools">
+        <div className="RTE-render-errors">
+          {this.renderErrors()}
+        </div>
         <form>
           <div className="rte-buttons">
             <input className="submit-note-button new-buttons" type="submit" value="Submit" onClick={this.handleSubmit} />
@@ -74,7 +77,7 @@ class RTETools extends React.Component {
 
           <div className="new-note-text-editor">
             <input className="my-editing-area" type="text" id="new-note-title-editor" value={this.state.title} placeholder={"Title your note"} onChange={this.updateTitle} />
-            <ReactQuill value={this.state.body} onChange={this.update} styles={false}>
+            <ReactQuill value={this.state.body} onChange={this.update}>
           </ReactQuill>
           </div>
         </form>

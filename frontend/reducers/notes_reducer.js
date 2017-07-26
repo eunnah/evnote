@@ -17,7 +17,7 @@ const NotesReducer = (state = {}, action) => {
       const newNote = {[action.payload.note.id]: action.payload.note};
       return merge({}, state, newNote);
     case REMOVE_NOTE:
-      delete newState[action.note.id];
+      delete newState[action.payload.note.id];
       return newState;
     default:
       return state;

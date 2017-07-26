@@ -16,6 +16,12 @@ class NoteTools extends React.Component {
     return this.props.deleteNote(this.props.match.params.noteId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.notesCount !== this.props.notesCount) {
+      return this.props.history.push(`/note/${this.props.firstNote}`);
+    }
+  }
+
   showInfo() {
 
   }

@@ -2,8 +2,11 @@ import { connect } from 'react-redux';
 import NoteTools from './note_tools';
 import { deleteNote } from '../../actions/note_actions';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
+  const notes = Object.values(state.notes);
   return {
+    firstNote: notes[0].id,
+    notesCount: notes.length,
   };
 };
 
@@ -14,6 +17,6 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(NoteTools);

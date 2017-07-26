@@ -19,7 +19,7 @@ class Home extends Component {
         </div>
         <Switch>
           <Route exact path="/note/new-note" component={NewNoteContainer} />
-          <Route path="/note/:noteId" component={NoteDetailContainer} />
+          <Route exact path="/note/:noteId" component={NoteDetailContainer} />
         </Switch>
       </section>
     );
