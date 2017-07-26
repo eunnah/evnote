@@ -3,8 +3,8 @@ import { Route } from 'react-router-dom';
 import Tags from './tags';
 import Tag from './tag';
 import NotebookSearch from './notebook_search';
-import Note from './note';
-import NoteTools from './note_tools';
+import NoteContainer from './note_container';
+import NoteToolsContainer from './note_tools_container';
 
 class NoteDetail extends Component {
 
@@ -17,9 +17,9 @@ class NoteDetail extends Component {
 
     return (
       <section className="note-detail">
-        <NoteTools note={note} currentUser={currentUser} />
+        <NoteToolsContainer />
         <div className="note">
-          <Note note={note} currentUser={currentUser} />
+          <NoteContainer />
         </div>
       </section>
     );

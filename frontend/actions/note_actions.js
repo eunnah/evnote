@@ -1,8 +1,10 @@
 import * as APIUtil from '../util/note_api_util';
+import * as Errors from './errors_actions';
 
 export const RECEIVE_NOTES = 'RECEIVE_NOTES';
 export const RECEIVE_NOTE = 'RECEIVE_NOTE';
 export const EDIT_NOTE = 'EDIT_NOTE';
+export const REMOVE_NOTE = 'REMOVE_NOTE';
 
 export const receiveNotes = notes => ({
   type: RECEIVE_NOTES,
@@ -14,18 +16,26 @@ export const receiveNote = payload => ({
   payload
 });
 
+export const removeNote = note => ({
+  type: REMOVE_NOTE,
+  note
+});
+
 export const createNote = note => dispatch => (
   APIUtil.createNote(note).then(note => {
-    return dispatch(receiveNote(note));
-  }
-  )
+    dispatch(receiveNote(note));
+    dispatch(Errors.clearErrors());
+  },
+  error => dispatch(Errors.receiveErrors(error.responseJSON)))
 );
 
 export const editNote = (id, note) => dispatch => (
-  APIUtil.editNote(id, note).then(note => (
-    dispatch(receiveNote(note))
-  ))
-);
+  APIUtil.editNote(id, note).then(note => {
+    dispatch(receiveNote(note));
+    dispatch(Errors.clearErrors());
+  },
+  error => dispatch(Errors.receiveErrors(error.responseJSON))
+));
 
 export const fetchNotes = () => dispatch => (
   APIUtil.fetchNotes().then(notes => (
@@ -38,3 +48,8 @@ export const fetchNote = id => dispatch => (
     dispatch(receiveNote(note))
   ))
 );
+
+export const deleteNote = (id) => (dispatch) => {
+  return APIUtil.deleteNote(id)
+    .then(note => dispatch(removeNote(note)));
+};

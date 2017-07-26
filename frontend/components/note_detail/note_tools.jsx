@@ -8,15 +8,15 @@ import {Redirect, withRouter} from 'react-router-dom';
 class NoteTools extends React.Component {
   constructor(props) {
     super(props);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleDelete() {
-    
-
+    console.log(this.props);
+    return this.props.deleteNote(this.props.match.params.noteId);
   }
 
   showInfo() {
-
 
   }
 
@@ -41,4 +41,4 @@ class NoteTools extends React.Component {
 }
 }
 
-export default NoteTools;
+export default withRouter(NoteTools);

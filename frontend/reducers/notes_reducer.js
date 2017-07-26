@@ -2,7 +2,8 @@ import merge from 'lodash/merge';
 
 import {
   RECEIVE_NOTE,
-  RECEIVE_NOTES
+  RECEIVE_NOTES,
+  REMOVE_NOTE
 } from '../actions/note_actions';
 
 const NotesReducer = (state = {}, action) => {
@@ -15,6 +16,9 @@ const NotesReducer = (state = {}, action) => {
     case RECEIVE_NOTE:
       const newNote = {[action.payload.note.id]: action.payload.note};
       return merge({}, state, newNote);
+    case REMOVE_NOTE:
+      delete newState[action.note.id];
+      return newState;
     default:
       return state;
   }

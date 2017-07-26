@@ -74,7 +74,7 @@ class RTETools extends React.Component {
 
           <div className="new-note-text-editor">
             <input className="my-editing-area" type="text" id="new-note-title-editor" value={this.state.title} placeholder={"Title your note"} onChange={this.updateTitle} />
-            <ReactQuill value={this.state.body} onChange={this.update}>
+            <ReactQuill value={this.state.body} onChange={this.update} styles={false}>
           </ReactQuill>
           </div>
         </form>
