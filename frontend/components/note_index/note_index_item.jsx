@@ -1,17 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import moment from 'moment';
 
-// need to limit character count for title and body
 // need to include date created
 
-const NoteIndexItem = ({ note }) => (
-  <li className="note-index-item">
-    <Link to={`/note/${note.id}`}>
-      <h4 className="preview-title child">{ note.title }</h4>
-      <h5 className="preview-time child">2 days ago</h5>
-      <p className="preview-body child">{ note.body }</p>
-    </Link>
-  </li>
-);
+const NoteIndexItem = ({ note }) => {
+  const regex = /(<([^>]+)>)/ig;
+
+  return (
+    <NavLink to={`/note/${note.id}`} activeClassName="active">
+      <li className="note-index-item">
+        <h4 className="preview-title child">{ note.title }</h4>
+        <h5 className="preview-time child">{moment(note.updated_at).startOf('day').fromNow()}</h5>
+        <p className="preview-body child">{ note.body.replace(regex, "") }</p>
+      </li>
+    </NavLink>
+);};
 
 export default NoteIndexItem;

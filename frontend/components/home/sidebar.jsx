@@ -8,7 +8,7 @@ const Sidebar = ({currentUser, logout}) => (
     <div className="circle-button" id="sidebar-note-icon"></div>
     <div className="circle-button" id="sidebar-notebook-icon"></div>
     <div className="circle-button" id="sidebar-tag-icon"></div>
-    <button className="header-button" onClick={logout}>Log Out</button>
+    <div className="circle-button" id="sidebar-logout-icon" onClick={logout}></div>
 	</section>
 );
 

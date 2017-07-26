@@ -3,8 +3,10 @@ import ReactQuill from 'react-quill';
 import {Redirect, withRouter} from 'react-router-dom';
 
 class Note extends React.Component {
+
   constructor(props) {
     super(props);
+
     this.state = {
       title: this.props.note.title,
       body: this.props.note.body,
@@ -32,10 +34,10 @@ class Note extends React.Component {
       );
     }
   }
-
-  componentWillUnmount() {
-    this.props.clearErrors();
-  }
+  //
+  // componentWillUnmount() {
+  //   this.props.clearErrors();
+  // }
 
   updateTitle(e) {
     this.setState({ title: e.currentTarget.value });
@@ -43,8 +45,8 @@ class Note extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const note = this.state;
-    return this.props.editNote(this.props.match.params.noteId, {note});
+    const note = {note: this.state};
+    return this.props.editNote(this.props.match.params.noteId, note);
   }
 
   // componentWillReceiveProps(nextProps) {

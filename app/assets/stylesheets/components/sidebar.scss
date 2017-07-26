@@ -3,6 +3,11 @@
   height: 36px;
 }
 
+.circle-button#sidebar-logout-icon {
+  background-size: 24px;
+  background-image: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501086400/logout_g0hpje.png);
+}
+
 .circle-button {
   display: block;
   width: 37px;
@@ -41,8 +46,6 @@
   border-right: 1px solid #ececec;
   background-color: #f8f8f8;
   height: 100%;
-}
-
-.sidebar-elephant-icon, .sidebar-new-icon, .sidebar-note-icon, .sidebar-notebook-icon, .sidebar-tag-icon {
-
+  display: flex column;
+  align-items: center;
 }
