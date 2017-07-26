@@ -1,23 +1,6 @@
-// import React from 'react';
-//
-// const Note = ({ note }) => {
-//   if (!note) return null;
-//
-//   return(
-//   <ul>
-//     <li>
-//       <h2>{note.title}</h2>
-//     </li>
-//     <li>{note.body}</li>
-//   </ul>);
-// };
-//
-// export default Note;
-
 import React from 'react';
 import ReactQuill from 'react-quill';
-import {withRouter} from 'react-router';
-import {Redirect} from 'react-router-dom';
+import {Redirect, withRouter} from 'react-router-dom';
 
 class Note extends React.Component {
   constructor(props) {
