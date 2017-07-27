@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import NotebookHeader from './note_index_header';
+import NotebookHeader from './notebook_header';
 import NotebookNoteIndexItem from './notebook_note_index_item';
 
 class NotebookNoteIndex extends Component {

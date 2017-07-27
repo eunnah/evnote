@@ -15,9 +15,7 @@ class Notebook extends Component {
     return (
       <section className="notebook">
         <div className="notebook-header">
-      		<div className="notebook-index-header-title">
-          	<h2>NOTEBOOKS</h2>
-      		</div>
+        	<h2>NOTEBOOKS</h2>
         </div>
         <div className="notebook-item-list">
         <ul>

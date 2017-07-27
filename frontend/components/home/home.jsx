@@ -5,8 +5,10 @@ import SidebarContainer from './sidebar_container';
 import NoteDetailContainer from '../note_detail/note_detail_container';
 import NewNoteContainer from '../new_note/new_note_container';
 import NotebookContainer from '../notebook/notebook_container';
+import NotebookNoteIndexContainer from '../notebook/notebook_note_index_container';
 
 class Home extends Component {
+// <Route exact path="/notebook/:notebookId" component={NotebookNoteIndexContainer} />
 
   render() {
     return (
@@ -19,7 +21,6 @@ class Home extends Component {
           <div className="note-index">
             <Route exact path="/note" component={NoteIndexContainer} />
             <Route exact path="/notebook" component={NotebookContainer} />
-            <Route exact path="/notebook/notebookId" component={NotebookNoteIndexContainer} />
           </div>
         </Switch>
         <Switch>
