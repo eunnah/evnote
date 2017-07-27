@@ -6,7 +6,7 @@ import {Redirect, withRouter} from 'react-router-dom';
 const mapStateToProps = (state) => {
   const notes = Object.values(state.notes);
   return {
-    firstNote: notes[0].id,
+    firstNote: notes[0],
     notesCount: notes.length,
   };
 };

@@ -17,8 +17,11 @@ class NoteTools extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.notesCount !== this.props.notesCount) {
-      return this.props.history.push(`/note/${this.props.firstNote}`);
+    if (nextProps.notesCount !== this.props.notesCount && nextProps.notesCount !== 0 && this.props.firstNote) {
+      return this.props.history.push(`/note/${this.props.firstNote.id}`);
+    }
+    else if (nextProps.notesCount === 0) {
+      return this.props.history.push('/note');
     }
   }
 

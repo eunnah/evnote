@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import NoteIndex from './note_index';
+import Notebook from './notebook';
 import { fetchNotes } from '../../actions/note_actions';
 import { selectAllNotes } from '../../reducers/selectors';
 import { withRouter } from 'react-router-dom';
@@ -17,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(NoteIndex));
+)(Notebook));
