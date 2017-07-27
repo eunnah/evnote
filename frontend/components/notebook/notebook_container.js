@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchNotebooks: (id) => dispatch(fetchNotebooks(id))
+  fetchNotebooks: () => dispatch(fetchNotebooks())
 });
 
 export default withRouter(connect(

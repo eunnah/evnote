@@ -58,11 +58,11 @@
 |-------|-------------|
 | "/signup" | "AuthFormContainer" |
 | "/login" | "AuthFormContainer" |
-| "/home" | "HomeContainer" |
-| "/home/note/:noteId" | "NoteDetailContainer" |
-| "/home/notebook/:notebookId/note/:noteId" | "NotebookContainer" |
-| "/home/tag/:tagId/note/:notedId" | "TagContainer" |
-| "/home/search-results" | "SearchResultsContainer"
+| "/note" | "HomeContainer" |
+| "/note/:noteId" | "NoteDetailContainer" |
+| "/notebook/:notebookId/note/:noteId" | "NotebookContainer" |
+| "/tag/:tagId/note/:notedId" | "TagContainer" |
+| "/search-results" | "SearchResultsContainer"
 | "/new-note" | "NewNoteContainer" |
 | "/search" | "Search" |
 | "/new-notebook" | "NewNotebook" |

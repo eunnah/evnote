@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NotebookHeader = ({notebooks}) => (
+const NotebookHeader = ({notebook}) => (
 	<div className="notebook-header">
 		<div className="notebook-index-header-title">
-    	<h2>NOTEBOOKS</h2>
+    	<h2>{notebook.title}</h2>
 		</div>
   </div>
 );
