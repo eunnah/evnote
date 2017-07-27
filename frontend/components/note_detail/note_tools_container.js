@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import NoteTools from './note_tools';
 import { deleteNote } from '../../actions/note_actions';
+import {Redirect, withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state) => {
   const notes = Object.values(state.notes);
@@ -16,7 +17,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(NoteTools);
+)(NoteTools));
