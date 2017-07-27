@@ -1,17 +1,15 @@
 import { connect } from 'react-redux';
 import Notebook from './notebook';
-import { fetchNotes } from '../../actions/note_actions';
-import { selectAllNotes } from '../../reducers/selectors';
+import { fetchNotebooks } from '../../actions/notebook_actions';
+import { selectAllNotebooks } from '../../reducers/selectors';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = (state, ownProps) => ({
-  notes: selectAllNotes(state),
-  loggedIn: Boolean(state.session.currentUser),
-  errors: state.errors
+const mapStateToProps = (state) => ({
+  notebooks: selectAllNotebooks(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchNotes: () => dispatch(fetchNotes())
+  fetchNotebooks: (id) => dispatch(fetchNotebooks(id))
 });
 
 export default withRouter(connect(
