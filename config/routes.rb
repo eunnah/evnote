@@ -5,8 +5,13 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
-    resources :notes, only: [:index, :show, :new, :create, :edit, :update, :destroy]
-    resources :notebooks, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+    resources :notes, only: [:index, :show, :create, :update, :destroy]
+    resources :notebooks, only: [:index, :show, :create, :update, :destroy]
+    resources :taggings, only: [:index, :show, :create, :destroy]
+    resources :tags, only: [:index, :show, :create, :destroy]
+    resources :notebooks do
+      resources :notes, only: :index
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,24 @@
+.notebook-header {
+  display: flex;
+  align-content: space-between;
+}
+
+.notebook-header-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  letter-spacing: 2.1px;
+  color: #878787;
+  width: 155px;
+  height: 20px;
+  margin: 20px;
+}
+
+.new-notebook {
+  height: 25px;
+  width: 25px;
+  background: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501172259/new-notebook_ie7t0u.png);
+  background-size: 25px 25px;
+  border: none;
+  margin: 20px 25px;
+  cursor: pointer;
+}

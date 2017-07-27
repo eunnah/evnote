@@ -21,6 +21,7 @@ class Home extends Component {
           <div className="note-index">
             <Route exact path="/note" component={NoteIndexContainer} />
             <Route exact path="/notebook" component={NotebookContainer} />
+            <Route exact path="/notebook/:notebookId" component={NotebookNoteIndexContainer} />
           </div>
         </Switch>
         <Switch>

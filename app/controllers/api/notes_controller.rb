@@ -1,7 +1,11 @@
 class Api::NotesController < ApplicationController
 
   def index
-    notes = Note.all
+    if params.has_key?(:notebook_id)
+      notes = Note.where(notebook_id: params[:notebook_id])
+    else
+      notes = Note.all
+    end
     @notes = notes.includes(:taggings)
     render :index
   end
