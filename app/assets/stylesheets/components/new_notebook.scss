@@ -1,0 +1,76 @@
+.new-notebook {
+  display: flex column;
+  height: 100%;
+  width: 100%;
+}
+
+.new-notebook-errors {
+  color: red;
+  font-size: 14px;
+  line-height: 1.2;
+  font-family: "Scope One", serif;
+  margin: 10px 0px;
+}
+
+.new-notebook-form {
+  height: 100%;
+  width: 100%;
+}
+
+.new-notebook-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.new-notebook-form {
+  height: 80%;
+}
+
+.new-buttons {
+  height: 28px;
+  width: 78px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  line-height: 25px;
+  margin: 10px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  border-radius: 7px;
+  text-align: center;
+  white-space: normal;
+  box-sizing: border-box;
+  border: none;
+  float: none;
+  transition: all .2s ease;
+  font: inherit;
+  color: #ffffff;
+  margin: 5px;
+  vertical-align: baseline;
+  align-items: flex-start;
+}
+
+.submit-notebook-button:hover, .cancel-notebook-button:hover {
+  background-color: #28a956;
+  border-color: #1b9848;
+  text-decoration: none;
+}
+
+.button {
+  text-align:center;
+}
+
+.submit-notebook-button, .cancel-notebook-button {
+  background-color: #2dbe60;
+}
+
+#new-notebook-title-editor, #new-notebook-description-editor {
+  font-size: 28px;
+  font-weight: 200;
+  height: 35px;
+  border: none;
+  color: #2dbe60;
+  font-family: "Scope One", serif;
+}

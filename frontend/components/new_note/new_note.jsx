@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Redirect, Link } from 'react-router-dom';
-import NewNoteButton from './new_note_button';
 import RTEToolsContainer from './rte_tools_container';
 
 class NewNote extends Component {

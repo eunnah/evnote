@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link, NavLink, withRouter } from 'react-router-dom';
 import NotebookHeader from './notebook_header';
 import NotebookNoteIndexItem from './notebook_note_index_item';
 
@@ -29,4 +29,4 @@ class NotebookNoteIndex extends Component {
   }
 }
 
-export default NotebookNoteIndex;
+export default withRouter(NotebookNoteIndex);

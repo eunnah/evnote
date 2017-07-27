@@ -11,6 +11,7 @@ class Notebook extends Component {
   render() {
     const { notebooks } = this.props;
     if (!notebooks) return null;
+    console.log(this.props);
 
     return (
       <section className="notebook">
@@ -30,4 +31,4 @@ class Notebook extends Component {
   }
 }
 
-export default Notebook;
+export default withRouter(Notebook);

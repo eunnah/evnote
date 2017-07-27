@@ -10,7 +10,6 @@ class Api::NotebooksController < ApplicationController
 
   def show
     @notebook = Notebook.find(params[:id])
-    @tagging_ids = Tagging.where(notebook_id: @notebook.id).pluck(:id)
   end
 
   def create

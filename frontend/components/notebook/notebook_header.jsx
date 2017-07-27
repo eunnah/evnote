@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 
 const NotebookHeader = ({notebook}) => (
 	<div className="notebook-header">
@@ -9,4 +9,4 @@ const NotebookHeader = ({notebook}) => (
   </div>
 );
 
-export default NotebookHeader;
+export default withRouter(NotebookHeader);

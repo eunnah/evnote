@@ -19,15 +19,15 @@ class Home extends Component {
         </div>
         <Switch>
           <div className="note-index">
-            <Route exact path="/note" component={NoteIndexContainer} />
-            <Route exact path="/notebook" component={NotebookContainer} />
-            <Route exact path="/notebook/:notebookId" component={NotebookNoteIndexContainer} />
+            <Route path="/note" component={NoteIndexContainer} />
+            <Route path="/notebook/:notebookId" component={NotebookNoteIndexContainer} />
+            <Route path="/notebook" component={NotebookContainer} />
           </div>
         </Switch>
         <Switch>
-          <Route exact path="/note/new-note" component={NewNoteContainer} />
-          <Route exact path="/note/:noteId" component={NoteDetailContainer} />
-          <Route exact path="/notebook/:notebookId/note/:noteId" component={NoteDetailContainer} />
+          <Route path="/notebook/:notebookId/note/:noteId" component={NoteDetailContainer} />
+          <Route path="/note/:noteId" component={NoteDetailContainer} />
+          <Route path="/note/new-note" component={NewNoteContainer} />
         </Switch>
       </section>
     );
