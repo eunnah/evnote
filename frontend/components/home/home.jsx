@@ -6,6 +6,7 @@ import NoteDetailContainer from '../note_detail/note_detail_container';
 import NewNoteContainer from '../new_note/new_note_container';
 import NotebookContainer from '../notebook/notebook_container';
 import NotebookNoteIndexContainer from '../notebook/notebook_note_index_container';
+import NewNotebookModal from '../new_notebook/new_notebook_modal';
 
 class Home extends Component {
 // <Route exact path="/notebook/:notebookId" component={NotebookNoteIndexContainer} />
@@ -17,6 +18,7 @@ class Home extends Component {
         <div className="sidebar">
           <SidebarContainer />
         </div>
+        <Route path="/new-notebook" component={NewNotebookModal} />
         <Switch>
           <div className="note-index">
             <Route path="/note" component={NoteIndexContainer} />
