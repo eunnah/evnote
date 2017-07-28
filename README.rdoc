@@ -1,28 +1,13 @@
-== README
+# Evnote
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Evnote live][app]
 
-Things you may want to cover:
+[app]: http://evnote.herokuapp.com
 
-* Ruby version
+Evnote is a note-taking web application inspired by Evernote that uses Ruby on Rails on the backend, a PostgreSQL database, React.js, and a Redux architectural framework on the frontend.
 
-* System dependencies
+## Features & Implementation
 
-* Configuration
+### Notes (Creating, Reading, Editing, and Deleting)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Notes are stored in a table with columns of 'id', 'title', 'body', 'author_id', 'notebook_id', 'created_at', and 'updated_at'. When the user logs in, an API call is made to the database, which fetches all the user's notes in the database, which are held in the store for the duration of the user's session.

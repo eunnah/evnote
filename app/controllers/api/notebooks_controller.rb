@@ -3,13 +3,12 @@ class Api::NotebooksController < ApplicationController
   before_action :require_logged_in
 
   def index
-    notebooks = Notebook.all
-    @notebooks = notebooks
+    @notebooks = Notebook.where(author_id: current_user.id)
     render :index
   end
 
   def show
-    @notebook = Notebook.find(params[:id])
+    @notebook = Notebook.where(params[:id], author_id: current_user.id)
     render :show
   end
 

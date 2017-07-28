@@ -2,16 +2,16 @@ class Api::NotesController < ApplicationController
 
   def index
     if params.has_key?(:notebook_id)
-      notes = Note.where(notebook_id: params[:notebook_id])
+      notes = Note.where(notebook_id: params[:notebook_id], author_id: current_user.id)
     else
-      notes = Note.all
+      notes = Note.where(author_id: current_user.id)
     end
     @notes = notes.includes(:taggings)
     render :index
   end
 
   def show
-    @note = Note.find(params[:id])
+    @note = Note.find(params[:id], author_id: current_user.id)
     @tagging_ids = Tagging.where(note_id: @note.id).pluck(:id)
   end
 
