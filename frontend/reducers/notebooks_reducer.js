@@ -14,7 +14,7 @@ const NotebooksReducer = (state = {}, action) => {
     case RECEIVE_NOTEBOOKS:
       return action.notebooks;
     case RECEIVE_NOTEBOOK:
-      const newNotebook = {[action.notebook.id]: action.notebook};
+      const newNotebook = {[action.payload.notebook.id]: action.payload.notebook};
       return merge({}, state, newNotebook);
     case REMOVE_NOTEBOOK:
       delete newState[action.note.id];

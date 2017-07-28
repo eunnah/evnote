@@ -5,11 +5,10 @@ import SidebarContainer from './sidebar_container';
 import NoteDetailContainer from '../note_detail/note_detail_container';
 import NewNoteContainer from '../new_note/new_note_container';
 import NotebookContainer from '../notebook/notebook_container';
+import NewNotebookContainer from '../new_notebook/new_notebook_container';
 import NotebookNoteIndexContainer from '../notebook/notebook_note_index_container';
-import NewNotebookModal from '../new_notebook/new_notebook_modal';
 
 class Home extends Component {
-// <Route exact path="/notebook/:notebookId" component={NotebookNoteIndexContainer} />
 
   render() {
     return (
@@ -18,18 +17,18 @@ class Home extends Component {
         <div className="sidebar">
           <SidebarContainer />
         </div>
-        <Route path="/new-notebook" component={NewNotebookModal} />
+        <div className="note-index">
+          <Switch>
+            <Route path="/home/notebook/:notebookId/" component={NotebookNoteIndexContainer} />
+            <Route path="/home/notebook" component={NotebookContainer} />
+            <Route path="/home" component={NoteIndexContainer} />
+          </Switch>
+        </div>
         <Switch>
-          <div className="note-index">
-            <Route path="/note" component={NoteIndexContainer} />
-            <Route path="/notebook/:notebookId" component={NotebookNoteIndexContainer} />
-            <Route path="/notebook" component={NotebookContainer} />
-          </div>
-        </Switch>
-        <Switch>
-          <Route path="/notebook/:notebookId/note/:noteId" component={NoteDetailContainer} />
-          <Route path="/note/:noteId" component={NoteDetailContainer} />
-          <Route path="/note/new-note" component={NewNoteContainer} />
+          <Route path="/home/notebook/:notebookId/note/:noteId" component={NoteDetailContainer} />
+          <Route path="/home/new-note" component={NewNoteContainer} />
+          <Route path="/home/new-notebook" component={NewNotebookContainer} />
+          <Route path="/home/note/:noteId" component={NoteDetailContainer} />
         </Switch>
       </section>
     );

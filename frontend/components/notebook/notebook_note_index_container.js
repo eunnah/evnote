@@ -7,14 +7,14 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => {
   const notebookId = ownProps.match.params.notebookId;
   return {
-  notebookNotes: selectNotebookNotes(state, notebookId),
+  notebookNotes: selectAllNotes(state),
   notebook: selectSingleNotebook(state, notebookId)
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchNotebookNotes: (id) => dispatch(fetchNotebookNotes(id)),
-  fetchNotebook: (id) => dispatch(fetchNotebook())
+  fetchNotebook: (id) => dispatch(fetchNotebook(id))
 });
 
 export default withRouter(connect(

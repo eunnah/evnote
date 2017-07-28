@@ -12,18 +12,21 @@ class NoteTools extends React.Component {
   }
 
   handleDelete() {
-    console.log(this.props);
     return this.props.deleteNote(this.props.match.params.noteId);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.notesCount !== this.props.notesCount && nextProps.notesCount !== 0 && this.props.firstNote) {
-      return this.props.history.push(`/note/${this.props.firstNote.id}`);
-    }
-    else if (nextProps.notesCount === 0) {
-      return this.props.history.push('/note');
-    }
-  }
+  // TEMPORARY FIX that I disabled to stop redirects
+  // componentWillReceiveProps(nextProps) {
+  //
+  //   if (nextProps.notesCount !== this.props.notesCount && nextProps.notesCount !== 0 && this.props.firstNote) {
+  //     console.log("first if statement");
+  //     return this.props.history.push(`/note/${this.props.firstNote.id}`);
+  //   }
+  //   else if (nextProps.notesCount === 0) {
+  //     console.log("second if statement -- no notesCount");
+  //     return this.props.history.push('/note');
+  //   }
+  // }
 
   showInfo() {
 

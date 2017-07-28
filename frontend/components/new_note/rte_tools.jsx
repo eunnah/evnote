@@ -33,7 +33,7 @@ class RTETools extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.notesCount !== this.props.notesCount) {
-      return this.props.history.push(`/note/${nextProps.noteId}`);
+      return this.props.history.push(`/home/note/${nextProps.noteId}`);
     }
   }
 
@@ -73,7 +73,6 @@ class RTETools extends React.Component {
             <input className="submit-note-button new-buttons" type="submit" value="Submit" onClick={this.handleSubmit} />
             <input className="cancel-note-button new-buttons" type="submit" value="Cancel" onClick={this.redirect} />
           </div>
-
 
           <div className="new-note-text-editor">
             <input className="my-editing-area" type="text" id="new-note-title-editor" value={this.state.title} placeholder={"Title your note"} onChange={this.updateTitle} />

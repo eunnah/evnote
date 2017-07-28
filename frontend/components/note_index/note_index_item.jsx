@@ -10,7 +10,7 @@ const NoteIndexItem = ({ note, match }) => {
   console.log(match);
 
   return (
-    <NavLink to={`/note/${note.id}`} activeClassName="active">
+    <NavLink to={`/home/note/${note.id}`} activeClassName="active">
       <li className='note-index-item'>
           <h4 className="preview-title child">{ note.title }</h4>
           <h5 className="preview-time child">{moment(note.updated_at).fromNow()}</h5>

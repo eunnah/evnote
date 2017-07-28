@@ -4,9 +4,11 @@ import { fetchNotebooks } from '../../actions/notebook_actions';
 import { selectAllNotebooks } from '../../reducers/selectors';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => {
+  return {
   notebooks: selectAllNotebooks(state)
-});
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchNotebooks: () => dispatch(fetchNotebooks())

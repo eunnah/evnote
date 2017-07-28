@@ -12,6 +12,3 @@ export const selectSingleNote = ({ notes }, id) => {
 export const selectSingleNotebook = ({ notebooks }, id) => {
   return notebooks[id] || {};
 };
-
-export const selectNotebookNotes = ({ notes }, notebookId) => Object.keys(notes)
-  .filter(id => {return notebookId === notes[id];}).map(id => notes[id]);

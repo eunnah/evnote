@@ -17,9 +17,9 @@ export const receiveNotebooks = notebooks => ({
   notebooks
 });
 
-export const receiveNotebook = notebook => ({
+export const receiveNotebook = payload => ({
   type: RECEIVE_NOTEBOOK,
-  notebook
+  payload
 });
 
 export const removeNotebook = notebook => ({
@@ -50,7 +50,7 @@ export const fetchNotebooks = () => dispatch => (
 );
 
 export const fetchNotebook = id => dispatch => (
-  APIUtil.fetchNote(id).then(notebook => (
+  APIUtil.fetchNotebook(id).then(notebook => (
     dispatch(receiveNotebook(notebook))
   ))
 );

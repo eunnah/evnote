@@ -11,18 +11,18 @@ class Notebook extends Component {
   render() {
     const { notebooks } = this.props;
     if (!notebooks) return null;
-    console.log(this.props);
 
     return (
       <section className="notebook">
         <div className="notebook-header">
         	<div className="notebook-header-title"><h3>NOTEBOOKS</h3></div>
-          <Link to="/new-notebook"><div className="add-notebook-icon"></div></Link>
+          <Link to="/home/new-notebook"><div className="add-notebook-icon"></div></Link>
         </div>
         <div className="notebook-item-list">
         <ul>
           {notebooks.map(notebook => (
-            <Link to={`/notebook/${notebook.id}`}><li className="notebook-item">{notebook.title}</li></Link>
+            <Link to={`/home/notebook/${notebook.id}`}><li className="notebook-item">
+              <h4 className="notebook-item-title">{notebook.title}</h4></li></Link>
           ))}
         </ul>
         </div>
@@ -31,4 +31,4 @@ class Notebook extends Component {
   }
 }
 
-export default withRouter(Notebook);
+export default Notebook;

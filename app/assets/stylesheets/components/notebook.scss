@@ -1,3 +1,25 @@
+.notebook-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 97%;
+  height: 60px;
+  padding-left: 10px;
+  cursor: pointer;
+  font-family: "Antic Slab", serif;
+  border-bottom: 1px solid #ececec;
+}
+
+.notebook-item:hover {
+  background-color: #2dbe60;
+}
+
+.notebook-item-title {
+  width: 75%;
+  color: #414141;
+  letter-spacing: .8px;
+}
+
 .notebook-header {
   display: flex;
   align-content: space-between;
@@ -13,7 +35,7 @@
   margin: 20px;
 }
 
-.new-notebook {
+.add-notebook-icon {
   height: 25px;
   width: 25px;
   background: url(https://res.cloudinary.com/dfsl8kikd/image/upload/v1501172259/new-notebook_ie7t0u.png);

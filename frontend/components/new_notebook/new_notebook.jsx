@@ -33,7 +33,7 @@ class NewNotebook extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.notebooksCount !== this.props.notebooksCount) {
-      return this.props.history.push(`/notebook/${nextProps.notebookId}`);
+      return this.props.history.push(`/home/notebook/${nextProps.notebookId}`);
     }
   }
 

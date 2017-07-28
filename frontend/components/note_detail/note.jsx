@@ -50,12 +50,6 @@ class Note extends React.Component {
     return this.props.editNote(this.props.match.params.noteId, note);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.note !== this.props.note) {
-  //     return this.props.history.push(`/note/${nextProps.noteId}`);
-  //   }
-  // }
-
   renderErrors() {
 
     return(
