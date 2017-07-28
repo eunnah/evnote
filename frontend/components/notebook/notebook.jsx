@@ -16,12 +16,12 @@ class Notebook extends Component {
       <section className="notebook">
         <div className="notebook-header">
         	<div className="notebook-header-title"><h3>NOTEBOOKS</h3></div>
-          <Link to="/home/new-notebook"><div className="add-notebook-icon"></div></Link>
+          <Link to="/home/notebook/new-notebook"><div className="add-notebook-icon"></div></Link>
         </div>
         <div className="notebook-item-list">
         <ul>
           {notebooks.map(notebook => (
-            <Link to={`/home/notebook/${notebook.id}`}><li className="notebook-item">
+            <Link to={`/home/notebook/${notebook.id}/`}><li className="notebook-item">
               <h4 className="notebook-item-title">{notebook.title}</h4></li></Link>
           ))}
         </ul>

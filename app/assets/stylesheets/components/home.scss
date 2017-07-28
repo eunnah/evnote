@@ -7,7 +7,8 @@
   background-color: #ffffff;
 }
 
-.note-index-item-list, .note-detail, .new-note {
+.note-index-item-list, .note-detail, .new-note, .new-notebook,
+.notebook-note-index-item-list, .notebook-item-list {
   overflow: auto;
   height: auto;
   -webkit-overflow-scrolling: touch;
@@ -16,7 +17,11 @@
 
 .note-index-item-list::-webkit-scrollbar,
 .note-detail::-webkit-scrollbar, .new-note::-webkit-scrollbar,
-.notebook-note-index::-webkit-scrollbar, .notebook::-webkit-scrollbar {
+.notebook-note-index::-webkit-scrollbar, .notebook::-webkit-scrollbar,
+.new-notebook::-webkit-scrollbar,
+.notebook-note-index-item-list::-webkit-scrollbar,
+.notebook-item-list::-webkit-scrollbar
+ {
     display: none;
 }
 
