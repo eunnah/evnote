@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: http://evnote.herokuapp.com
 [trello]: https://trello.com/b/ATxTlWpv/evnote
 
 ## Minimum Viable Product
