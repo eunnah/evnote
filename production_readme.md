@@ -28,4 +28,4 @@ To display the notes that correspond to a specific notebook, I used a separate A
 
 ## Future Steps for Evnote
 
-I plan to implement tagging nots, which will be stored in the database through a 'Tag' table and a join table called 'Taggings'.
+I plan to implement tagging notes, which will be stored in the database through a 'Tag' table and a join table called 'Taggings'.
