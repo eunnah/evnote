@@ -63,32 +63,29 @@ class SignupForm extends React.Component {
         <div className="create-account-tagline">
           Capture, organize, and share notes from anywhere. Your best ideas are always with you and always in sync.
         </div>
-        <br /> <br /><b>Create Account</b>
+        <br /> <br /><b>Create Account</b><br></br>
         <form className="login-form-box">
           <br/>
           Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Email<br />
               <div className="center-input">
                 <input type="text"
-                value={this.state.username}
+                placeholder="Email address" value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
                 />
               </div>
-            </label>
             <br/>
-            <label>Password<br />
+
               <div className="center-input">
-                <input type="password"
+                <input type="password" placeholder="Password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-input"
                 />
             </div>
-            </label>
             <br/>
             <div className="signup-button">
               <input type="submit" value="Sign Up" onClick={this.handleSubmit} />

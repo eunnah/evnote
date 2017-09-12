@@ -1,4 +1,4 @@
-html, body, header, footer, section, img, ul, li, h1, h2, h3, h4, h5, h6, p, form {
+html, body, header, footer, section, img, ul, li, h1, h2, h3, h4, h5, h6, p, form, input {
   margin: 0;
   border: 0;
   padding: 0;
@@ -7,4 +7,5 @@ html, body, header, footer, section, img, ul, li, h1, h2, h3, h4, h5, h6, p, for
   text-decoration: inherit;
   color: inherit;
   background: transparent;
+  box-sizing: content-box;
 }

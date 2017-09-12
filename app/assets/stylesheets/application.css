@@ -30,6 +30,9 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 img {
@@ -48,6 +51,7 @@ img {
   position: relative;
   height: 4px;
   display: block;
+  width: 100%
 }
 
 subheader {
@@ -62,7 +66,7 @@ header img {
 }
 
 .create-account-tagline {
-  font-family: webfont;
+
 }
 
 ul {
@@ -76,6 +80,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #ffffff;
   margin: 0 auto;
+  padding: 0;
   width: 100%;
   background-color: rgb(243, 243, 243);
   overflow-x: hidden;
@@ -103,6 +108,11 @@ h2, h3, h4, h5, h6 {
   vertical-align: baseline;
 }
 
+.login-form, .signup-form {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 .login-form input[type="submit"]:last-child, .signup-form input[type="submit"]:last-child, .guest-login {
   cursor: pointer;
@@ -117,7 +127,6 @@ h2, h3, h4, h5, h6 {
   border-radius: 7px;
   text-align: center;
   white-space: normal;
-  box-sizing: border-box;
   border-width: 1px;
   border-style: solid;
   float: none;
