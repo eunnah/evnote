@@ -4,7 +4,9 @@ import RTETools from './rte_tools';
 import { clearErrors } from '../../actions/errors_actions';
 
 const mapStateToProps = (state) => {
+
   const notes = Object.values(state.notes);
+  console.log(notes);
   return {
     notesCount: notes.length,
     currentUser: state.session.currentUser,
