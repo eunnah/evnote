@@ -44,7 +44,6 @@ class Note extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log(this.props);
     e.preventDefault();
     const note = {note: this.state};
     return this.props.editNote(this.props.match.params.noteId, note);

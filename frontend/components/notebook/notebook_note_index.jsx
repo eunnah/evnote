@@ -6,13 +6,13 @@ import NotebookNoteIndexItem from './notebook_note_index_item';
 class NotebookNoteIndex extends Component {
 
   componentDidMount() {
-    console.log(this.props.match);
+
     this.props.fetchNotebookNotes(this.props.match.params.notebookId);
     this.props.fetchNotebook(this.props.match.params.notebookId);
   }
 
   render() {
-    console.log(this.props);
+    
     const { notebookNotes, notebook, match } = this.props;
     if (!notebook) return null;
 

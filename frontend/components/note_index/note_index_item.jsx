@@ -7,7 +7,6 @@ import moment from 'moment';
 const NoteIndexItem = ({ note, match }) => {
   const regex = /(<([^>]+)>)/ig;
   const activeClass = match.params.noteId === note.id ? "active" : "";
-  console.log(match);
 
   return (
     <NavLink to={`/home/note/${note.id}`} activeClassName="active">
